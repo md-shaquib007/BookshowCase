@@ -14,7 +14,30 @@
 
         body{
             background: linear-gradient(to right, coral 0%, rgb(232, 236, 136) 50%, rgb(235, 235, 78) 100%);
-        }
+        
+                animation: animate-bg 10s infinite alternate;
+                background-size: 400% 400%;
+            }
+            
+            /* Keyframes for changing background colors */
+            @keyframes animate-bg {
+                0% {
+                    background: #ff4d4d; /* Red */
+                }
+                25% {
+                    background: #ffaf40; /* Orange */
+                }
+                50% {
+                    background: #00cc99; /* Green */
+                }
+                75% {
+                    background: #3399ff; /* Blue */
+                }
+                100% {
+                    background: #cc33ff; /* Purple */
+                }
+            }
+            
 
         main {
             width: 400px;

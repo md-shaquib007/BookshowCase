@@ -14,7 +14,27 @@
 
         body{
             background: linear-gradient(to right,#efebcc, #87CEFA);
+            animation: animate-bg 12s infinite alternate ;
         }
+
+        @keyframes animate-bg {
+            0% {
+                background: linear-gradient(to right, #efebcc, #87CEFA);
+            }
+            25% {
+                background: linear-gradient(to right, #f4a261, #2a9d8f);
+            }
+            50% {
+                background: linear-gradient(to right, #e76f51, #264653);
+            }
+            75% {
+                background: linear-gradient(to right, #9cd6ef, #d152f7);
+            }
+            100% {
+                background: linear-gradient(to right, #efebcc, #87CEFA);
+            }
+        }
+        
 
         form{
             width: 400px;
