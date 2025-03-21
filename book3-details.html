@@ -19,9 +19,11 @@
                 background-size: 400% 400%;
             }
 
-            header{
-                width: 400px;
+            header {
+                width: 100%; /* Full width */
+                max-width: 100%; /* Prevents it from overflowing */
             }
+            
             
             /* Keyframes for changing background colors */
             @keyframes animate-bg {
@@ -83,7 +85,7 @@
 
 <body class="container-fluid">
 
-    <header class="bg-dark w-100">
+    <header class="bg-dark">
         <h3 class="bg-dark text-white d-flex justify-content-center mt-1">
             Book Showcase : Book 3 Details
         </h3>
