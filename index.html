@@ -1,10 +1,86 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MyBook — stories worth keeping</title><link rel="stylesheet" href="styles.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MyBook — A carefully curated shelf of thoughtful books for curious minds. Browse computer science, AI, and technology classics.">
+  <meta name="theme-color" content="#f7f3ec">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="MyBook — Stories worth keeping">
+  <meta property="og:description" content="A carefully curated shelf of thoughtful books for curious minds. Browse timeless ideas, practical knowledge, and technology classics.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="library-book.webp">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d97728'/><text x='50' y='70' font-size='65' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23ffffff'>M</text></svg>">
+  <title>MyBook — Stories worth keeping</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MyBook",
+    "url": "https://md-shaquib007.github.io/BookshowCase/",
+    "description": "A curated digital shelf for technology and computer science books."
+  }
+  </script>
+</head>
 <body>
-<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">M</span> MyBook</a><nav class="nav-links"><a href="index.html">Home</a><a href="book_showcase.html">Explore books</a><a href="book_login.html" class="btn btn-primary">Sign in</a></nav></div></header>
-<main class="page-shell">
-  <section class="hero"><div><div class="eyebrow">A better reading habit starts here</div><h1>Find your next great read.</h1><p>A carefully curated shelf of thoughtful books for curious minds. Browse timeless ideas, practical knowledge, and stories that stay with you.</p><div class="hero-actions"><a class="btn btn-primary" href="book_showcase.html">Explore the collection <span>→</span></a><a class="btn btn-quiet" href="#why">Why MyBook?</a></div></div><div class="hero-art" aria-label="Decorative book illustration"><div class="hero-book"><h2>READ<br>MORE</h2><p>THE CURATED SHELF</p></div></div></section>
-  <section id="why" class="feature-row"><div class="feature"><div class="eyebrow">01</div><strong>Curated with care</strong><span>Less scrolling, more discovering. Every title earns its place.</span></div><div class="feature"><div class="eyebrow">02</div><strong>For every kind of mind</strong><span>Explore technology, creativity, and ideas that shape our world.</span></div><div class="feature"><div class="eyebrow">03</div><strong>Keep learning</strong><span>Build a personal library of books you’ll come back to.</span></div></section>
-</main>
-<footer class="site-footer"><div class="page-shell footer-wrap"><span>© 2025 MyBook. Made for curious readers.</span><span>support@mybooks.com · Follow along @mybook</span></div></footer>
-</body></html>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">M</span> MyBook</a>
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="book_showcase.html">Explore books</a>
+        <a href="book_login.html" class="btn btn-primary">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">A better reading habit starts here</div>
+        <h1>Find your next great read.</h1>
+        <p>A carefully curated shelf of thoughtful books for curious minds. Browse timeless ideas, practical knowledge, and stories that stay with you.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="book_showcase.html">Explore the collection <span aria-hidden="true">→</span></a>
+          <a class="btn btn-quiet" href="#why">Why MyBook?</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Decorative book illustration">
+        <div class="hero-book">
+          <h2>READ<br>MORE</h2>
+          <p>THE CURATED SHELF</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="feature-row" aria-label="Why choose MyBook">
+      <article class="feature">
+        <div class="eyebrow">01</div>
+        <strong>Curated with care</strong>
+        <span>Less scrolling, more discovering. Every title earns its place.</span>
+      </article>
+      <article class="feature">
+        <div class="eyebrow">02</div>
+        <strong>For every kind of mind</strong>
+        <span>Explore technology, creativity, and ideas that shape our world.</span>
+      </article>
+      <article class="feature">
+        <div class="eyebrow">03</div>
+        <strong>Keep learning</strong>
+        <span>Build a personal library of books you’ll come back to.</span>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-wrap">
+      <span>© 2026 MyBook. Made for curious readers.</span>
+      <span>support@mybooks.com · Follow along @mybook</span>
+    </div>
+  </footer>
+</body>
+</html>

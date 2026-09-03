@@ -1,3 +1,76 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sign in — MyBook</title><link rel="stylesheet" href="styles.css"></head>
-<body><main class="login-page"><section class="login-art"><a class="brand" href="index.html"><span class="brand-mark">M</span> MyBook</a><div><h1>Your next chapter starts here.</h1><p>Save your favorite discoveries and return to them whenever inspiration strikes.</p></div><div class="login-quote">“A room without books is like a body without a soul.”</div></section><section class="login-panel"><form class="login-form"><a class="back-link" href="index.html">← Back to home</a><h1>Welcome back.</h1><p>Sign in to your personal bookshelf.</p><label for="uname">Username</label><input id="uname" type="text" autocomplete="username" required><label for="mail">Email address</label><input id="mail" type="email" autocomplete="email" required><label for="pwd">Password</label><input id="pwd" type="password" autocomplete="current-password" required><button class="btn btn-primary" type="submit">Sign in <span>→</span></button></form></section></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your MyBook personal bookshelf to save favorite titles and reading lists.">
+  <meta name="theme-color" content="#183044">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d97728'/><text x='50' y='70' font-size='65' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23ffffff'>M</text></svg>">
+  <title>Sign in — MyBook</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-art">
+      <a class="brand" href="index.html"><span class="brand-mark">M</span> MyBook</a>
+      <div>
+        <h1>Your next chapter starts here.</h1>
+        <p>Save your favorite discoveries and return to them whenever inspiration strikes.</p>
+      </div>
+      <div class="login-quote">“A room without books is like a body without a soul.”</div>
+    </section>
+
+    <section class="login-panel">
+      <form class="login-form" id="loginForm" novalidate onsubmit="handleLogin(event)">
+        <a class="back-link" href="index.html">← Back to home</a>
+        <h1>Welcome back.</h1>
+        <p>Sign in to your personal bookshelf.</p>
+        
+        <label for="uname">Username</label>
+        <input id="uname" type="text" autocomplete="username" required aria-required="true">
+        
+        <label for="mail">Email address</label>
+        <input id="mail" type="email" autocomplete="email" required aria-required="true">
+        
+        <label for="pwd">Password</label>
+        <input id="pwd" type="password" autocomplete="current-password" required aria-required="true">
+        
+        <button class="btn btn-primary" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+  </main>
+
+  <div id="toastContainer"></div>
+
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      const mail = document.getElementById('mail');
+      const uname = document.getElementById('uname');
+      const pwd = document.getElementById('pwd');
+
+      if (!uname.value.trim() || !mail.value.trim() || !pwd.value) {
+        showToast('Please fill out all required fields.');
+        return;
+      }
+      if (!mail.checkValidity()) {
+        showToast('Please enter a valid email address.');
+        mail.focus();
+        return;
+      }
+
+      showToast('Welcome back, ' + uname.value + '! Redirecting to collection...');
+      setTimeout(() => {
+        window.location.href = 'book_showcase.html';
+      }, 1500);
+    }
+
+    function showToast(msg) {
+      const container = document.getElementById('toastContainer');
+      container.innerHTML = `<div class="toast-notice" role="alert"><span>${msg}</span></div>`;
+      setTimeout(() => { container.innerHTML = ''; }, 3500);
+    }
+  </script>
+</body>
+</html>
